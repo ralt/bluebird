@@ -1,3 +1,8 @@
+---
+layout: default
+title: README
+---
+
 [![Build Status](https://travis-ci.org/petkaantonov/bluebird.png?branch=master)](https://travis-ci.org/petkaantonov/bluebird)
 
 <a href="http://promisesaplus.com/">
@@ -11,23 +16,8 @@ Bluebird is a fully featured [promise](#what-are-promises-and-why-should-i-use-t
 
 #Topics
 
-- [Features](#features)
-- [Quick start](#quick-start)
-- [API Reference and examples](https://github.com/petkaantonov/bluebird/blob/master/API.md)
-- [What are promises and why should I use them?](#what-are-promises-and-why-should-i-use-them)
-- [Questions and issues](#questions-and-issues)
-- [Error handling](#error-handling)
-- [Development](#development)
-    - [Testing](#testing)
-    - [Benchmarking](#benchmarks)
-    - [Custom builds](#custom-builds)
-    - [For library authors](#for-library-authors)
-- [What is the sync build?](#what-is-the-sync-build)
-- [License](#license)
-- [Snippets for common problems](https://github.com/petkaantonov/bluebird/wiki/Snippets)
-- [Promise anti-patterns](https://github.com/petkaantonov/bluebird/wiki/Promise-anti-patterns)
-- [Changelog](https://github.com/petkaantonov/bluebird/blob/master/changelog.md)
-- [Optimization guide](#optimization-guide)
+* This will become a table of contents (this text will be scraped).
+{:toc}
 
 #Features:
 
@@ -67,9 +57,9 @@ Download the [bluebird.js](https://github.com/petkaantonov/bluebird/tree/master/
 
 The global variable `Promise` becomes available after the above script tag.
 
-A [minimal bluebird browser build](#custom-builds) is ̃36.51KB minified*, 10.85KB gzipped and has no external dependencies.
+A [minimal bluebird browser build](#custom-builds) is ̃36.51KB minified\*, 10.85KB gzipped and has no external dependencies.
 
-*Google Closure Compiler using Simple.
+\*Google Closure Compiler using Simple.
 
 ####Browser support
 

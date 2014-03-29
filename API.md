@@ -1,88 +1,12 @@
+---
+layout: default
+title: API Reference
+---
+
 #API Reference
 
-- [Core](#core)
-    - [`new Promise(Function<Function resolve, Function reject> resolver)`](#new-promisefunctionfunction-resolve-function-reject-resolver---promise)
-    - [`.then([Function fulfilledHandler] [, Function rejectedHandler ] [, Function progressHandler ])`](#thenfunction-fulfilledhandler--function-rejectedhandler---function-progresshandler----promise)
-    - [`.catch(Function handler)`](#catchfunction-handler---promise)
-    - [`.catch([Function ErrorClass|Function predicate...], Function handler)`](#catchfunction-errorclassfunction-predicate-function-handler---promise)
-    - [`.error( [rejectedHandler] )`](#error-rejectedhandler----promise)
-    - [`.finally(Function handler)`](#finallyfunction-handler---promise)
-    - [`.tap(Function handler)`](#tapfunction-handler---promise)
-    - [`.bind(dynamic thisArg)`](#binddynamic-thisarg---promise)
-    - [`.done([Function fulfilledHandler] [, Function rejectedHandler ] [, Function progressHandler ])`](#donefunction-fulfilledhandler--function-rejectedhandler---function-progresshandler----promise)
-    - [`Promise.try(Function fn [, Array<dynamic>|dynamic arguments] [, dynamic ctx] )`](#promisetryfunction-fn--arraydynamicdynamic-arguments--dynamic-ctx----promise)
-    - [`Promise.method(Function fn)`](#promisemethodfunction-fn---function)
-    - [`Promise.resolve(dynamic value)`](#promiseresolvedynamic-value---promise)
-    - [`Promise.reject(dynamic reason)`](#promiserejectdynamic-reason---promise)
-    - [`Promise.defer()`](#promisedefer---promiseresolver)
-    - [`Promise.cast(dynamic value)`](#promisecastdynamic-value---promise)
-    - [`Promise.bind(dynamic thisArg)`](#promisebinddynamic-thisarg---promise)
-    - [`Promise.is(dynamic value)`](#promiseisdynamic-value---boolean)
-    - [`Promise.longStackTraces()`](#promiselongstacktraces---void)
-- [Progression](#progression)
-    - [`.progressed(Function handler)`](#progressedfunction-handler---promise)
-- [Promise resolution](#promise-resolution)
-    - [`.resolve(dynamic value)`](#resolvedynamic-value---undefined)
-    - [`.reject(dynamic reason)`](#rejectdynamic-reason---undefined)
-    - [`.progress(dynamic value)`](#progressdynamic-value---undefined)
-    - [`.callback`](#callback---function)
-- [Timers](#timers)
-    - [`.delay(int ms)`](#delayint-ms---promise)
-    - [`.timeout(int ms [, String message])`](#timeoutint-ms--string-message---promise)
-    - [`Promise.delay([dynamic value], int ms)`](#promisedelaydynamic-value-int-ms---promise)
-- [Promisification](#promisification)
-    - [`Promise.promisify(Function nodeFunction [, dynamic receiver])`](#promisepromisifyfunction-nodefunction--dynamic-receiver---function)
-    - [`Promise.promisify(Object target)`](#promisepromisifyobject-target---object)
-    - [`Promise.promisifyAll(Object target)`](#promisepromisifyallobject-target---object)
-    - [`.nodeify([Function callback])`](#nodeifyfunction-callback---promise)
-- [Cancellation](#cancellation)
-    - [`.cancellable()`](#cancellable---promise)
-    - [`.cancel()`](#cancel---promise)
-    - [`.fork([Function fulfilledHandler] [, Function rejectedHandler ] [, Function progressHandler ])`](#forkfunction-fulfilledhandler--function-rejectedhandler---function-progresshandler----promise)
-    - [`.uncancellable()`](#uncancellable---promise)
-    - [`.isCancellable()`](#iscancellable---boolean)
-- [Synchronous inspection](#synchronous-inspection)
-    - [`.isFulfilled()`](#isfulfilled---boolean)
-    - [`.isRejected()`](#isrejected---boolean)
-    - [`.isPending()`](#isdefer---boolean)
-    - [`.isResolved()`](#isresolved---boolean)
-    - [`.value()`](#value---dynamic)
-    - [`.reason()`](#reason---dynamic)
-    - [`.inspect()`](#inspect---promiseinspection)
-- [Generators](#generators)
-    - [`Promise.coroutine(GeneratorFunction generatorFunction)`](#promisecoroutinegeneratorfunction-generatorfunction---function)
-    - [`Promise.coroutine.addYieldHandler(function handler)`](#promisecoroutineaddyieldhandlerfunction-handler---void)
-- [Utility](#utility)
-    - [`.call(String propertyName [, dynamic arg...])`](#callstring-propertyname--dynamic-arg---promise)
-    - [`.get(String propertyName)`](#getstring-propertyname---promise)
-    - [`.return(dynamic value)`](#returndynamic-value---promise)
-    - [`.throw(dynamic reason)`](#throwdynamic-reason---promise)
-    - [`.toString()`](#tostring---string)
-    - [`.toJSON()`](#tojson---object)
-    - [`Promise.noConflict()`](#promisenoconflict---object)
-    - [`Promise.onPossiblyUnhandledRejection(Function handler)`](#promiseonpossiblyunhandledrejectionfunction-handler---undefined)
-    - [`Promise.onUnhandledRejectionHandled(Function handler)`](#promiseonunhandledrejectionhandledfunction-handler---undefined)
-- [Collections](#collections)
-    - [`.all()`](#all---promise)
-    - [`.props()`](#props---promise)
-    - [`.settle()`](#settle---promise)
-    - [`.any()`](#any---promise)
-    - [`.race()`](#race---promise)
-    - [`.some(int count)`](#someint-count---promise)
-    - [`.spread([Function fulfilledHandler] [, Function rejectedHandler ])`](#spreadfunction-fulfilledhandler--function-rejectedhandler----promise)
-    - [`.map(Function mapper)`](#mapfunction-mapper---promise)
-    - [`.reduce(Function reducer [, dynamic initialValue])`](#reducefunction-reducer--dynamic-initialvalue---promise)
-    - [`.filter(Function filterer)`](#filterfunction-filterer---promise)
-    - [`Promise.all(Array<dynamic>|Promise values)`](#promiseallarraydynamicpromise-values---promise)
-    - [`Promise.props(Object|Promise object)`](#promisepropsobjectpromise-object---promise)
-    - [`Promise.settle(Array<dynamic>|Promise values)`](#promisesettlearraydynamicpromise-values---promise)
-    - [`Promise.any(Array<dynamic>|Promise values)`](#promiseanyarraydynamicpromise-values---promise)
-    - [`Promise.race(Array|Promise promises)`](#promiseracearraypromise-promises---promise)
-    - [`Promise.some(Array<dynamic>|Promise values, int count)`](#promisesomearraydynamicpromise-values-int-count---promise)
-    - [`Promise.join([dynamic value...])`](#promisejoindynamic-value---promise)
-    - [`Promise.map(Array<dynamic>|Promise values, Function mapper)`](#promisemaparraydynamicpromise-values-function-mapper---promise)
-    - [`Promise.reduce(Array<dynamic>|Promise values, Function reducer [, dynamic initialValue])`](#promisereducearraydynamicpromise-values-function-reducer--dynamic-initialvalue---promise)
-    - [`Promise.filter(Array<dynamic>|Promise values, Function filterer)`](#promisefilterarraydynamicpromise-values-function-filterer---promise)
+* This will become a table of contents (this text will be scraped).
+{:toc}
 
 ##Core
 
@@ -1785,6 +1709,6 @@ The return values from the filtered functions are coerced to booleans, with the 
 
 [See the instance method `.filter()` for an example.](#filterfunction-filterer---promise)
 
-*The original array is not modified.
+*The original array is not modified.*
 
 <hr>

@@ -1,10 +1,12 @@
+---
+layout: default
+title: Contributing to bluebird
+---
+
 # Contributing to bluebird
 
-1. [Directory structure](#directory-structure)
-2. [Style guide](#style-guide)
-3. [Scripts and macros](#scripts-and-macros)
-4. [JSHint](#jshint)
-5. [Testing](#testing)
+* This will become a table of contents (this text will be scraped).
+{:toc}
 
 ## Directory structure
 

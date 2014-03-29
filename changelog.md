@@ -1,3 +1,13 @@
+---
+layout: default
+title: Changelog
+---
+
+#Changelog
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 ## 1.2.0 (2014-03-29)
 
 Features:
