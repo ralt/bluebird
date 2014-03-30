@@ -11,7 +11,7 @@ body {
 }
 
 .header-wrapper {
-    background: #111;
+    background: #0B0B3B;
 }
 
 .header {
@@ -20,7 +20,7 @@ body {
 
 .header,
 .header a {
-    color: #ddd;
+    color: #fff;
 }
 
 .header a {
@@ -59,15 +59,15 @@ h3 {
 }
 
 h1 {
-    border-left: 4px solid burlywood;
+    border-left: 4px solid #A9D0F5;
 }
 
 h2 {
-    border-left: 2px solid burlywood;
+    border-left: 2px solid #A9D0F5;
 }
 
 h3 {
-    border-left: 1px solid burlywood;
+    border-left: 1px solid #A9D0F5;
 }
 
 h5 {
