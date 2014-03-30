@@ -1,6 +1,6 @@
 ---
 layout: default
-title: README
+title: bluebird
 ---
 
 [![Build Status](https://travis-ci.org/petkaantonov/bluebird.png?branch=master)](https://travis-ci.org/petkaantonov/bluebird)

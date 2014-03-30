@@ -7,36 +7,38 @@
     <!-- Mobile Screen Resizing -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
-    <div class="logo">Bluebird</div>
-    <ul class="menu">
-      <li class="home">
-        <a href="/">
-          Home
-        </a>
-      </li>
-      <li class="readme">
-        <a href="/README.html">
-          Readme
-        </a>
-      </li>
-      <li class="api">
-        <a href="API.html">
-          API Reference
-        </a>
-      </li>
-      <li class="contributing">
-        <a href="CONTRIBUTING.html">
-          Contributing
-        </a>
-      </li>
-      <li class="changelog">
-        <a href="changelog.html">
-          Changelog
-        </a>
-      </li>
-    </ul>
-    {{ content }}
+    <div class="header-wrapper">
+      <div class="header">
+        <div class="logo">Bluebird</div>
+        <ul class="menu">
+          <li class="home">
+            <a href="/">
+              Home
+            </a>
+          </li>
+          <li class="api">
+            <a href="API.html">
+              API Reference
+            </a>
+          </li>
+          <li class="contributing">
+            <a href="CONTRIBUTING.html">
+              Contributing
+            </a>
+          </li>
+          <li class="changelog">
+            <a href="changelog.html">
+              Changelog
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      {{ content }}
+    </div>
   </body>
 </html>
