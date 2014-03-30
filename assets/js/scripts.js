@@ -20,8 +20,9 @@
     var h2s = document.querySelectorAll('h2');
     var h3s = document.querySelectorAll('h3');
     var h4s = document.querySelectorAll('h4');
+    var h5s = document.querySelectorAll('h5');
 
-    [h1s, h2s, h3s, h4s].forEach(function(headings) {
+    [h1s, h2s, h3s, h4s, h5s].forEach(function(headings) {
         [].forEach.call(headings, function(heading) {
             var clone = nav.cloneNode(true);
             clone.children[1].href = '#' + heading.id;
