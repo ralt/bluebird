@@ -4,13 +4,17 @@ body {
     font: 16px Arial, sans-serif;
 }
 
+.header,
+.content {
+    width: 960px;
+    margin: auto;
+}
+
 .header-wrapper {
     background: #111;
 }
 
 .header {
-    width: 1024px;
-    margin: auto;
     line-height: 50px;
 }
 
@@ -44,11 +48,6 @@ body {
     padding: 0 20px;
 }
 
-.content {
-    width: 1024px;
-    margin: auto;
-}
-
 a {
     color: #666;
 }
@@ -73,4 +72,8 @@ h3 {
 
 h5 {
     font-size: 1em;
+}
+
+pre {
+    font-size: 14px;
 }
