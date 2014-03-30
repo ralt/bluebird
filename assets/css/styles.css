@@ -77,3 +77,33 @@ h5 {
 pre {
     font-size: 14px;
 }
+
+.nav {
+    float: left;
+    position: relative;
+    left: -30px;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+.nav a {
+    opacity: 0.1;
+    text-decoration: none;
+}
+
+.nav .top,
+.nav .anchor {
+    display: block;
+    width: 20px;
+    text-align: center;
+}
+
+.nav .top {
+    margin-left: 2px;
+}
+
+.nav .anchor {
+    margin-top: 5px;
+}

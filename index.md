@@ -16,8 +16,23 @@ Bluebird is a fully featured [promise](#what-are-promises-and-why-should-i-use-t
 
 #Topics
 
-* This will become a table of contents (this text will be scraped).
-{:toc}
+- [Features](#features)
+- [Quick start](#quick-start)
+- [API Reference and examples](https://github.com/petkaantonov/bluebird/blob/master/API.md)
+- [What are promises and why should I use them?](#what-are-promises-and-why-should-i-use-them)
+- [Questions and issues](#questions-and-issues)
+- [Error handling](#error-handling)
+- [Development](#development)
+    - [Testing](#testing)
+    - [Benchmarking](#benchmarks)
+    - [Custom builds](#custom-builds)
+    - [For library authors](#for-library-authors)
+- [What is the sync build?](#what-is-the-sync-build)
+- [License](#license)
+- [Snippets for common problems](https://github.com/petkaantonov/bluebird/wiki/Snippets)
+- [Promise anti-patterns](https://github.com/petkaantonov/bluebird/wiki/Promise-anti-patterns)
+- [Changelog](https://github.com/petkaantonov/bluebird/blob/master/changelog.md)
+- [Optimization guide](#optimization-guide)
 
 #Features:
 
